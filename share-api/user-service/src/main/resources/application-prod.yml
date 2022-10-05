@@ -1,0 +1,16 @@
+server:
+  port: 8081
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.103.107.137:8848
+        heart-beat-interval: 5000
+        heart-beat-timeout: 20000
+        namespace: prod
+        register-enabled: true
+  jpa:
+    open-in-view: false
+jwt:
+  secret: aaaaaaaaaabbbbbbbbbbbcccccccccccddddddd
+  expire-time-in-second: 1209600

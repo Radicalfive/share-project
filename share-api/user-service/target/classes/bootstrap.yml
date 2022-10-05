@@ -1,18 +1,20 @@
 spring:
   application:
     name: user-service
+  profiles:
+    active: dev
   cloud:
     nacos:
-      discovery:
-        server-addr: 124.222.178.129:8848
-        username: nacos
-        password: nacos
-        namespace: dev
+      #      discovery:
+      #        server-addr: 124.222.178.129:8848
+      #        username: nacos
+      #        password: nacos
+      #        namespace: dev
       config:
-        server-addr: 124.222.178.129:8848
+        server-addr: 47.103.107.137:8848
         file-extension: yml
         namespace: dev
-        group: DEFAULT_GROUP
+        #        group: DEV_GROUP
         timeout: 5000
         config-long-poll-timeout: 10000
         config-retry-time: 2000

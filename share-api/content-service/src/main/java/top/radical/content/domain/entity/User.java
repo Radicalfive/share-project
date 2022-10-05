@@ -1,4 +1,4 @@
-package top.radical.content.domain.entity;
+package com.ej.content.domain.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,7 +10,7 @@ import javax.persistence.Id;
 
 /**
  * @description:
- * @author: radical
+ * @author: ej
  * @create: 2022-09-06
  **/
 

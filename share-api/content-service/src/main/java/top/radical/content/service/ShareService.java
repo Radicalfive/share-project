@@ -1,12 +1,16 @@
-package top.radical.content.service;
+package com.ej.content.service;
 
-import top.radical.content.domain.entity.Share;
+//import com.alibaba.csp.sentinel.annotation.SentinelResource;
+//import com.alibaba.csp.sentinel.slots.block.BlockException;
+import com.ej.content.domain.dto.ShareAuditDto;
+import com.ej.content.domain.dto.ShareDto;
+import com.ej.content.domain.entity.Share;
 
 import java.util.List;
 
 /**
  * @description:
- * @author: radical
+ * @author: ej
  * @create: 2022-09-06
  **/
 
@@ -18,4 +22,8 @@ public interface ShareService {
     //Share findById(Integer id);
 
     List<Share> findAll();
+
+    Share findById(Integer id);
+
+    Share auditShare(ShareAuditDto shareAuditDto) throws IllegalAccessException;
 }

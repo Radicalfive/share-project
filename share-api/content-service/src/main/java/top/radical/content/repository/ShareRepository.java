@@ -1,11 +1,11 @@
-package top.radical.content.repository;
+package com.ej.content.repository;
 
+import com.ej.content.domain.entity.Share;
 import org.springframework.data.jpa.repository.JpaRepository;
-import top.radical.content.domain.entity.Share;
 
 /**
  * @description:
- * @author: radical
+ * @author: ej
  * @create: 2022-09-06
  **/
 

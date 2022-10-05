@@ -1,4 +1,4 @@
-package top.radical.content.domain.entity;
+package com.ej.content.domain.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,7 +10,7 @@ import java.util.Date;
 
 /**
  * @description:
- * @author: radical
+ * @author: ej
  * @create: 2022-09-06
  **/
 
@@ -77,7 +77,7 @@ public class Share {
     /**
      * 是否显示 0:否 1:是
      */
-    private Integer showFlag;
+    private Boolean showFlag;
 
     /**
      * 审核状态 NOT_YET: 待审核 PASSED:审核通过 REJECTED:审核不通过

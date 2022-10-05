@@ -1,4 +1,4 @@
-package top.radical.content.common;
+package com.ej.content.common;
 
 import lombok.Data;
 

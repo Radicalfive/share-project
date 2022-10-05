@@ -8,10 +8,14 @@ import top.radical.user.domain.dto.UserDto;
 import top.radical.user.domain.entity.User;
 import top.radical.user.repository.UserRepository;
 import top.radical.user.service.UserService;
+import top.radical.user.utils.JwtOperator;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @description:
- * @author: radical
+ * @author: ej
  * @create: 2022-09-24
  **/
 
@@ -28,8 +32,18 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User login(UserDto userDto) {
-        return userRepository.findByMobileAndPassword(userDto.getUsername(), userDto.getPassword());
+    public Map login(UserDto userDto) {
+        JwtOperator jwtOperator = new JwtOperator();
+        HashMap<String, Object> claims = new HashMap<>();
+        User user = userRepository.findByMobileAndPassword(userDto.getUsername(), userDto.getPassword());
+        claims.put("id", user.getId());
+        claims.put("role", user.getRoles());
+        claims.put("nickname",user.getNickname());
+        String token = jwtOperator.generateToken(claims);
+        HashMap<Object, Object> result = new HashMap<>();
+//        result.put("user", user);
+        result.put("token", token);
+        return result;
     }
 }
 

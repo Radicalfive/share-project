@@ -1,14 +1,14 @@
-package top.radical.content.domain.dto;
+package com.ej.content.domain.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import top.radical.content.domain.entity.Share;
+import com.ej.content.domain.entity.Share;
 
 /**
  * @description:
- * @author: radical
+ * @author: ej
  * @create: 2022-09-06
  **/
 @Data

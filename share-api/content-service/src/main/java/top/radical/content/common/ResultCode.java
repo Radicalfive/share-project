@@ -1,4 +1,4 @@
-package top.radical.content.common;
+package com.ej.content.common;
 
 /**
  * @description: 状态枚举

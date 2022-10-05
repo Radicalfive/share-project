@@ -1,11 +1,14 @@
 package top.radical.user.service;
 
+
 import top.radical.user.domain.dto.UserDto;
 import top.radical.user.domain.entity.User;
 
+import java.util.Map;
+
 /**
  * @description:
- * @author: radical
+ * @author: ej
  * @create: 2022-09-24
  **/
 
@@ -22,5 +25,5 @@ public interface UserService {
      * @param userDto userDto
      * @return user
      */
-    User login(UserDto userDto);
+    Map login(UserDto userDto);
 }
